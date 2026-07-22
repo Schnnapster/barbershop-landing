@@ -1,0 +1,11 @@
+# Службові файли ОС
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Редактори
+.vscode/
+.idea/
+
+# Логи
+*.log
