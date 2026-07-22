@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON BLADE — Барбершоп</title>
+  <meta name="description" content="Брутальний барбершоп IRON BLADE. Чоловічі стрижки, оформлення бороди, дитячі стрижки. Запишись онлайн.">
+
+  <!-- Google Fonts: Bebas Neue для заголовків, Inter для тексту -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== ШАПКА / НАВІГАЦІЯ ===================== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">IRON<span>BLADE</span></a>
+
+      <!-- Навігація: на мобільному перетворюється на висувне меню -->
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav__link" data-i18n="nav.about">Про нас</a>
+        <a href="#services" class="nav__link" data-i18n="nav.services">Послуги</a>
+        <a href="#masters" class="nav__link" data-i18n="nav.masters">Майстри</a>
+        <a href="#reviews" class="nav__link" data-i18n="nav.reviews">Відгуки</a>
+        <a href="#booking" class="nav__link nav__link--cta" data-i18n="nav.book">Записатися</a>
+      </nav>
+
+      <div class="header__actions">
+        <!-- Перемикач мови UA / EN -->
+        <div class="lang" id="lang" role="group" aria-label="Вибір мови">
+          <button class="lang__btn is-active" data-lang="uk" type="button">UA</button>
+          <button class="lang__btn" data-lang="en" type="button">EN</button>
+        </div>
+
+        <!-- Кнопка-бургер (видима лише на мобільних) -->
+        <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="hero__pre" data-i18n="hero.pre">З 2012 року · Без компромісів</p>
+      <h1 class="hero__title" data-i18n-html="hero.title">СТРИЖКА,<br>ЯКА ГОВОРИТЬ<br>ЗА ТЕБЕ</h1>
+      <p class="hero__subtitle" data-i18n="hero.subtitle">
+        Чоловічий барбершоп для тих, хто цінує характер, точність і хорошу розмову в кріслі майстра.
+      </p>
+      <a href="#booking" class="btn btn--primary hero__cta" data-i18n="hero.cta">Записатися</a>
+    </div>
+  </section>
+
+  <!-- ===================== ПРО НАС ===================== -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+      <!-- Реальне фото інтер'єру (з fallback-заглушкою під ним) -->
+      <div class="about__media reveal">
+        <div class="placeholder placeholder--about">
+          <img class="ph-img" loading="lazy" alt="Інтер'єр барбершопу IRON BLADE"
+               src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80&auto=format&fit=crop">
+          <span data-i18n="about.photo">ФОТО ІНТЕР'ЄРУ</span>
+        </div>
+      </div>
+
+      <div class="about__content reveal">
+        <p class="section__label" data-i18n="about.label">Про барбершоп</p>
+        <h2 class="section__title" data-i18n="about.title">МІСЦЕ З ХАРАКТЕРОМ</h2>
+        <p class="about__text" data-i18n="about.text1">
+          IRON BLADE — це цегла, шкіра, сталь і запах хорошого тоніка. Ми не женемось за модою заради моди:
+          ми робимо стрижку, яка пасує саме тобі.
+        </p>
+        <p class="about__text" data-i18n="about.text2">
+          Наші майстри — це ремісники з багаторічним досвідом. Заходь за стрижкою, а отримуєш ще
+          міцну каву, чесну пораду та півгодини тиші від міської метушні.
+        </p>
+        <div class="about__stats">
+          <div class="stat"><span class="stat__num">12</span><span class="stat__label" data-i18n="about.stat1">років на ринку</span></div>
+          <div class="stat"><span class="stat__num">8k+</span><span class="stat__label" data-i18n="about.stat2">задоволених клієнтів</span></div>
+          <div class="stat"><span class="stat__num">5.0</span><span class="stat__label" data-i18n="about.stat3">рейтинг на картах</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ПОСЛУГИ ===================== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__label" data-i18n="services.label">Що ми робимо</p>
+        <h2 class="section__title" data-i18n="services.title">ПОСЛУГИ ТА ЦІНИ</h2>
+      </div>
+
+      <div class="services__grid">
+        <!-- Картка послуги -->
+        <article class="card service reveal">
+          <div class="service__top">
+            <h3 class="service__name" data-i18n="service1.name">Чоловіча стрижка</h3>
+            <span class="service__price">350 ₴</span>
+          </div>
+          <p class="service__desc" data-i18n="service1.desc">Класика або фейд — стрижка машинкою та ножицями під форму голови й стиль.</p>
+        </article>
+
+        <article class="card service reveal">
+          <div class="service__top">
+            <h3 class="service__name" data-i18n="service2.name">Оформлення бороди</h3>
+            <span class="service__price">250 ₴</span>
+          </div>
+          <p class="service__desc" data-i18n="service2.desc">Моделювання, окантовка небезпечною бритвою та догляд гарячим рушником.</p>
+        </article>
+
+        <article class="card service reveal">
+          <div class="service__top">
+            <h3 class="service__name" data-i18n="service3.name">Стрижка + борода</h3>
+            <span class="service__price">550 ₴</span>
+          </div>
+          <p class="service__desc" data-i18n="service3.desc">Повний комплекс: голова та борода в єдиному образі. Вигідніше, ніж окремо.</p>
+        </article>
+
+        <article class="card service reveal">
+          <div class="service__top">
+            <h3 class="service__name" data-i18n="service4.name">Дитяча стрижка</h3>
+            <span class="service__price">200 ₴</span>
+          </div>
+          <p class="service__desc" data-i18n="service4.desc">Акуратно та без стресу для юного джентльмена до 12 років.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== МАЙСТРИ ===================== -->
+  <section class="masters section" id="masters">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__label" data-i18n="masters.label">Команда</p>
+        <h2 class="section__title" data-i18n="masters.title">НАШІ МАЙСТРИ</h2>
+      </div>
+
+      <div class="masters__grid">
+        <article class="card master reveal">
+          <div class="placeholder placeholder--master">
+            <img class="ph-img" loading="lazy" alt="Майстер Артем Вовк"
+                 src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80&auto=format&fit=crop">
+            <span data-i18n="master.photo">ФОТО</span>
+          </div>
+          <h3 class="master__name">Артем Вовк</h3>
+          <p class="master__role" data-i18n="master1.role">Топ-барбер · фейди та класика</p>
+        </article>
+
+        <article class="card master reveal">
+          <div class="placeholder placeholder--master">
+            <img class="ph-img" loading="lazy" alt="Майстер Дмитро Сірко"
+                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80&auto=format&fit=crop">
+            <span data-i18n="master.photo">ФОТО</span>
+          </div>
+          <h3 class="master__name">Дмитро Сірко</h3>
+          <p class="master__role" data-i18n="master2.role">Барбер · борода та небезпечна бритва</p>
+        </article>
+
+        <article class="card master reveal">
+          <div class="placeholder placeholder--master">
+            <img class="ph-img" loading="lazy" alt="Майстер Ілля Грім"
+                 src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80&auto=format&fit=crop">
+            <span data-i18n="master.photo">ФОТО</span>
+          </div>
+          <h3 class="master__name">Ілля Грім</h3>
+          <p class="master__role" data-i18n="master3.role">Барбер · дитячі та молодіжні стрижки</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ВІДГУКИ ===================== -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__label" data-i18n="reviews.label">Відгуки</p>
+        <h2 class="section__title" data-i18n="reviews.title">ЩО КАЖУТЬ КЛІЄНТИ</h2>
+      </div>
+
+      <div class="reviews__grid">
+        <article class="card review reveal">
+          <p class="review__text" data-i18n="review1.text">«Ходжу сюди третій рік. Жодного разу не вийшов незадоволеним — майстри реально слухають, що ти хочеш.»</p>
+          <p class="review__author">— Максим К.</p>
+        </article>
+
+        <article class="card review reveal">
+          <p class="review__text" data-i18n="review2.text">«Атмосфера — топ. Кава, музика, розмова. Борода тепер завжди в порядку.»</p>
+          <p class="review__author">— Сергій П.</p>
+        </article>
+
+        <article class="card review reveal">
+          <p class="review__text" data-i18n="review3.text">«Водив сина на дитячу стрижку — зробили швидко й без сліз. Рекомендую.»</p>
+          <p class="review__author">— Андрій М.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ФОРМА ЗАПИСУ ===================== -->
+  <section class="booking section" id="booking">
+    <div class="container booking__inner">
+      <div class="booking__head">
+        <p class="section__label" data-i18n="booking.label">Запис</p>
+        <h2 class="section__title" data-i18n="booking.title">ЗАПИШИСЬ У КРІСЛО</h2>
+        <p class="booking__lead" data-i18n="booking.lead">Залиш заявку — передзвонимо й підтвердимо зручний час.</p>
+      </div>
+
+      <!-- Форма-заглушка: обробка на JS, без бекенду -->
+      <form class="form" id="bookingForm" novalidate>
+        <div class="form__row">
+          <label class="form__field">
+            <span class="form__label" data-i18n="form.name">Ім'я</span>
+            <input type="text" name="name" class="form__input" data-i18n-placeholder="form.namePh" placeholder="Як вас звати?" required>
+          </label>
+
+          <label class="form__field">
+            <span class="form__label" data-i18n="form.phone">Телефон</span>
+            <input type="tel" name="phone" class="form__input" placeholder="+380 (__) ___-__-__" required>
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label class="form__field">
+            <span class="form__label" data-i18n="form.service">Послуга</span>
+            <select name="service" class="form__input" required>
+              <option value="" disabled selected data-i18n="form.servicePh">Оберіть послугу</option>
+              <option value="haircut" data-i18n="service1.name">Чоловіча стрижка</option>
+              <option value="beard" data-i18n="service2.name">Оформлення бороди</option>
+              <option value="combo" data-i18n="service3.name">Стрижка + борода</option>
+              <option value="kids" data-i18n="service4.name">Дитяча стрижка</option>
+            </select>
+          </label>
+
+          <label class="form__field">
+            <span class="form__label" data-i18n="form.time">Зручний час</span>
+            <select name="time" class="form__input" required>
+              <option value="" disabled selected data-i18n="form.timePh">Коли вам зручно?</option>
+              <option value="morning" data-i18n="form.morning">Ранок (10:00–12:00)</option>
+              <option value="day" data-i18n="form.day">День (12:00–17:00)</option>
+              <option value="evening" data-i18n="form.evening">Вечір (17:00–21:00)</option>
+            </select>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary form__submit" data-i18n="form.submit">Надіслати заявку</button>
+
+        <!-- Повідомлення про успішну відправку (показується через JS) -->
+        <p class="form__success" id="formSuccess" data-i18n="form.success" hidden>
+          Дякуємо! Ми зв'яжемося з вами для підтвердження запису.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== ФУТЕР ===================== -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer">IRON<span>BLADE</span></a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Чоловічий барбершоп з характером.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title" data-i18n="footer.contacts">Контакти</h4>
+        <p><a href="tel:+380671234567" class="footer__link">+380 (67) 123-45-67</a></p>
+        <p><a href="mailto:hello@ironblade.ua" class="footer__link">hello@ironblade.ua</a></p>
+        <p class="footer__text" data-i18n="footer.address">м. Київ, вул. Сталева, 7</p>
+        <p class="footer__text" data-i18n="footer.hours">Щодня 10:00 – 21:00</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title" data-i18n="footer.socials">Соцмережі</h4>
+        <div class="footer__socials">
+          <a href="#" class="social" aria-label="Telegram">TG</a>
+          <a href="#" class="social" aria-label="Instagram">IG</a>
+          <a href="#" class="social" aria-label="Facebook">FB</a>
+          <a href="#" class="social" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p data-i18n="footer.rights">© 2026 IRON BLADE. Усі права захищені.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
